@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  cassandra:
+    image: cassandra:4.1
+    container_name: cassandra
+    ports:
+      - "9042:9042"
+    environment:
+      - CASSANDRA_KEYSPACE=imsdata
+      - CASSANDRA_CLUSTER_NAME=ims-cluster
+    volumes:
+      - cassandra_data:/var/lib/cassandra
+
+  ims-app:
+    build: .
+    container_name: ims-app
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_DATA_CASSANDRA_CONTACT_POINTS=cassandra
+      - SPRING_DATA_CASSANDRA_PORT=9042
+      - SPRING_DATA_CASSANDRA_KEYSPACE_NAME=imsdata
+      - LOG_LEVEL=INFO
+      - SPRING_PROFILES_ACTIVE=test
+    volumes:
+      - ./src/main/resources/logback.xml:/app/logback.xml
+      - ./src/main/resources/application-test.properties:/app/application-test.properties
+    depends_on:
+      - cassandra
+    command: ["java", "-jar", "app.jar", "--spring.config.location=classpath:/application-test.properties"]
+
+volumes:
+  cassandra_data:
