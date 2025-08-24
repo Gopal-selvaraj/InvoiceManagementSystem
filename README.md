@@ -23,8 +23,8 @@ This project is a REST API built with Spring Boot, Maven, and Apache Cassandra.
 ### Clone the repository
 
 ```sh
-git clone <your-repo-url>
-cd <project-directory>
+git clone [<your-repo-url>](https://github.com/Gopal-selvaraj/InvoiceManagementSystem)
+cd ims
 
 # 2. Build and run with Docker Compose
 
@@ -63,4 +63,4 @@ Cassandra connection properties are set via environment variables in docker-comp
 - To run tests in Docker: `docker-compose run app mvn test`
 
 # Project Repository
-Replace `<your-repo-url>` and add more details as needed for your specific API endpoints.
+Replace `[<your-repo-url>](https://github.com/Gopal-selvaraj/InvoiceManagementSystem)` and add more details as needed for your specific API endpoints.
