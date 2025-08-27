@@ -22,22 +22,21 @@ This project is a REST API built with Spring Boot, Maven, and Apache Cassandra.
 
 ### Clone the repository
 
-```sh
-git clone git@github.com:Gopal-selvaraj/InvoiceManagementSystem.git
-cd invoicemanagementsystem
+# ```sh
+- git clone git@github.com:Gopal-selvaraj/InvoiceManagementSystem.git
+- cd invoicemanagementsystem
 
 # 2. Build and run with Docker Compose
 
-docker-compose up --build
+- docker-compose up --build
 
-The Cassandra service runs on port 9042.
-The Spring Boot app runs on port 8080.
+- The Cassandra service runs on port 9042.
+- The Spring Boot app runs on port 8080.
 
 # 3. API Usage
-   Access the REST API at:
-   http://localhost:8080/
+- Access the REST API at: http://localhost:8080/
 
-Refer to your API documentation or source code for available endpoints.
+- Refer to your API documentation or source code for available endpoints.
 
 # Project Structure
 
@@ -47,7 +46,7 @@ Refer to your API documentation or source code for available endpoints.
 - docker-compose.yml - Multi-container orchestration
 
 # Configuration
-Cassandra connection properties are set via environment variables in docker-compose.yml.
+- Cassandra connection properties are set via environment variables in docker-compose.yml.
 
 # Logging
 - Uses Logback for logging.
@@ -63,11 +62,10 @@ Cassandra connection properties are set via environment variables in docker-comp
 - To run tests in Docker: `docker-compose run app mvn test`
 
 # Project Repository
-Replace https://github.com/Gopal-selvaraj/InvoiceManagementSystem.git and add more details as needed for your specific API endpoints.
+- Replace https://github.com/Gopal-selvaraj/InvoiceManagementSystem.git and add more details as needed for your specific API endpoints.
 
 # API Documentation (Swagger UI)
 This project uses Swagger UI (via Springdoc OpenAPI) for interactive API documentation.
-- After starting the application, access Swagger UI at:
-- http://localhost:8080/swagger-ui.html
+- After starting the application, access Swagger UI at: http://localhost:8080/swagger-ui.html
 - Swagger UI provides details of all available REST endpoints, request/response formats, and allows you to test API calls directly from the browser.
 
