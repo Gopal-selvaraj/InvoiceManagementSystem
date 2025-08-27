@@ -64,3 +64,10 @@ Cassandra connection properties are set via environment variables in docker-comp
 
 # Project Repository
 Replace https://github.com/Gopal-selvaraj/InvoiceManagementSystem.git and add more details as needed for your specific API endpoints.
+
+# API Documentation (Swagger UI)
+This project uses Swagger UI (via Springdoc OpenAPI) for interactive API documentation.
+- After starting the application, access Swagger UI at:
+- http://localhost:8080/swagger-ui.html
+- Swagger UI provides details of all available REST endpoints, request/response formats, and allows you to test API calls directly from the browser.
+
