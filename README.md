@@ -26,14 +26,14 @@ This project is a REST API built with Spring Boot, Maven, and Apache Cassandra.
 - git clone git@github.com:Gopal-selvaraj/InvoiceManagementSystem.git
 - cd invoicemanagementsystem
 
-# 2. Build and run with Docker Compose
+# Build and run with Docker Compose
 
 - docker-compose up --build
 
 - The Cassandra service runs on port 9042.
 - The Spring Boot app runs on port 8080.
 
-# 3. API Usage
+# API Usage
 - Access the REST API at: http://localhost:8080/
 
 - Refer to your API documentation or source code for available endpoints.
